@@ -1,0 +1,116 @@
+<!--
+
+ZipWatch - tempalte.html
+Written by: Aanandita Pujji
+
+-->
+<doctype html>
+<html>
+	<head>
+		<title>ZipWatch</title>
+
+        <meta http-equiv="Content-Type" content="text/html" charset=UTF-8 />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+	    <script src="/js/bin/raphael-2.1.4.min.js"></script>
+    	<script src="/js/bin/justgage.js"></script>
+		
+		<script src="/js/main.js"></script>
+		<script src="/js/menu.js"></script>
+		<script src="/js/jsondata.js"></script>
+
+        <link rel='icon' type="image/png" href="/img/icon.png" />
+		<link href="/css/main.css" rel="stylesheet" type="text/css" />
+		<link href="/css/template.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,300|Roboto+Condensed:300,400' rel='stylesheet' type='text/css' />
+	</head>
+	<body>
+        <div id="wrapper">
+    		<div id="header">
+				<div class="logo">
+					<a href="/"><i class="fa fa-map-marker fa-lg"></i>&nbsp;<span>ZipWatch</span></a>
+				</div>
+				<div class="nav template">
+					<a href="#page-info" class="fa fa-star-o" title="Rating"></a>
+					<a href="#maj-container" class="fa fa-bar-chart" title="Major Crime"></a>
+					<a href="#min-container" class="fa fa-bar-chart" title="Minor Crime"></a>
+					<a href="#recs-container" class="fa fa-plus" title="Similar Zipcodes"></a>
+				</div>
+			</div>
+            <div id="page-info">
+				<div id="container">
+					<h1 id="city-name"></h1>
+					<h2 id="zipcode"></h2>
+					<div id="gauge-container">
+						<div id="gauge-block">
+							<center><div id="rating"></div></center>
+						</div>
+					</div>
+				</div>
+            </div>
+            <div id="maj-container" name="maj-container">
+            	<div id="maj-block">
+            		<h3>Major Crime</h3>
+            		<canvas id="maj-chart" height="300" width="150"></canvas>
+            	</div>
+
+                <div id="maj-info">
+                    <h1>Major Crime</h1>
+                    <p>Major crimes include:</p>
+                    <ul>
+                        <li>Murder</li>
+                        <li>Manslaughter</li>
+                        <li>Rape</li>
+                        <li>Arson</li>
+                        <li>Burglary</li>
+                        <li>Assult With Intent To Kill</li>
+                        <li>Larceny</li>
+                        <li>Etc.</li>
+                    </ul>
+
+                    <p class="text">There were a total number of <span id="curr"></span> major crimes reported this year. In five years, that number will <span id="change"></span> to <span id="pred"></span>.</p>
+                </div>
+            </div>
+    		<div id="min-container" name="min-container">
+    			<div id="min-block">
+            		<h3>Minor Crime</h3>
+            		<canvas id="min-chart" height="300" width="150"></canvas>
+            	</div>
+
+                <div id="min-info">
+                    <h1>Minor Crime</h1>
+                    <p>Minor crimes include:</p>
+                    <ul>
+                        <li>Sexual Harrassment</li>
+                        <li>Vandalism</li>
+                        <li>Shoplifting</li>
+                        <li>Etc.</li>
+                    </ul>
+                    <p class="text">There were a total number of <span id="curr"></span> minor crimes reported this year. In five years, that number will <span id="change"></span> to <span id="pred"></span>.</p>
+                </div>
+    		</div>
+            <div id="recs-container" name="recs-container">
+				<div id="cont">
+					<h1>Similar Zipcodes</h1>
+					<div id="recs"></div>
+				</div>
+            </div>
+    		<div id="footer">
+            	<div class="row info">
+					<div class="col-one col"><a href=""><i class="fa fa-map-marker fa-lg"></i>&nbsp;<span>ZipWatch</span></a></div>
+					<div class="col-two col">
+						<a href="" class="fa fa-envelope"></a>
+						<a href="" class="fa fa-facebook"></a>
+						<a href="" class="fa fa-github"></a>
+					</div>
+				</div>
+				<div class="row copyright">
+					Copyright <i class="fa fa-copyright"></i> 2016
+				</div>
+            </div>
+        </div>
+	</body>
+</html>

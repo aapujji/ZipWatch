@@ -1,0 +1,273 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #f9f9f9;
+}
+
+/* MAIN CONTENT CSS */
+
+#page-info {
+	width: 100%;
+	height: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+#page-info #container {
+	width: 100%;
+	height: 100%;
+	margin: auto 0;
+	padding-top: 50px;
+}
+
+#page-info h1 {
+	text-transform: uppercase;
+	font-size: 48px;
+	font-size: 4.8vw;
+	font-weight: 400;
+	padding: 10px 20px;
+}
+
+#page-info h2 {
+	font-size: 32px;
+	font-size: 3.2vw;
+	font-weight: 300;
+}
+
+#gauge-container {
+	min-height: 400px;
+	height: 90vh;
+}
+
+#gauge-container #gauge-block {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#gauge-container #gauge-block #rating {
+	width: 45%;
+	min-width: 300px;
+	margin-top: -100px;
+}
+
+#maj-container, #min-container {
+	width: 100%;
+	height: 100%;
+	height: 100vh;
+	overflow: hidden;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+#maj-container #maj-block, #min-container #min-block {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+	width: 20%;
+	min-height: 300px;
+	min-width: 200px;
+}
+
+#maj-container #maj-block {
+	float: right;
+	right: 25%;
+}
+
+#min-container #min-block {
+	float: left;
+	left: 25%;
+}
+
+#maj-container #maj-block h3, #min-container #min-block h3 {
+	padding-bottom: 15px;
+	margin: 0;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: 'Raleway', arial, helvetica, sans-serif;
+}
+
+#maj-container #maj-info {
+	position: relative;
+	top: 50%;
+	left: 15%;
+	float: left;
+	transform: translateY(-50%);
+	width: 20%;
+	min-width: 150px;
+	max-width: 400px;
+	padding: 0px 20px;
+	line-height: 20px;
+	
+	font-family: 'Raleway', sans-serif;
+}
+
+#min-container #min-info {
+	position: relative;
+	top: 50%;
+	right: 15%;
+	float: right;
+	transform: translateY(-50%);
+	width: 20%;
+	height: 60%;
+	padding: 0px 20px;
+	line-height: 20px;
+	
+	font-family: 'Raleway', sans-serif;
+}
+
+#maj-container #maj-info h1, #min-container #min-info h1 {
+	font-size: 36px;
+	padding: 0;
+	margin-bottom: 40px;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#maj-container #maj-info ul, #min-container #min-info ul {
+	text-align: left;
+	margin: 10px 0 10px 40px;
+}
+
+#maj-container #maj-info .text {
+	margin: 20px 0;
+	padding: 0px 15px;
+	display: inline-block;
+}
+
+
+
+
+#recs-container {
+	width: 100%;
+	padding: 80px 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+#recs-container h1 {
+	font-family: 'Roboto Condensed', arial, helvetica, sans-serif;
+	font-size: 28px;
+}
+
+#recs-container #recs {
+	font-family: 'Raleway', sans-serif;
+}
+
+#recs-container #recs a {
+	text-decoration: none;
+	display: inline-block;
+	color: #000;
+	width: 150px;
+	margin: 40px 80px 0 80px;
+	transition: all .5s;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	-ms-transition: all .5s;
+}
+
+#recs-container #recs a:hover {
+	color: rgba(242,115,153,1.0);
+	transition: all .5s;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	-ms-transition: all .5s;
+}
+
+#recs-container #recs a h2 {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+#recs-container #recs a h3 {
+	font-size: 22px;
+	font-weight: 300;
+}
+
+@media screen and (max-width: 400px) {
+	#page-info h1 {
+		font-size: 32px;
+		font-size: 10vw;
+	}
+	
+	#page-info h2 {
+		font-size: 24px;
+		font-size: 7.5vw;
+	}
+}
+
+
+@media screen and (max-width: 750px) {
+	#maj-container, #min-container {
+		height: auto;
+		overflow: visible;
+		padding: 50px 0;
+	}
+	
+	#maj-container #maj-block, #min-container #min-block {
+		top: 0;
+		transform: none;
+	}
+	
+	#maj-container #maj-info, #min-container #min-info {
+		padding: 30px 0 0 0;
+	}
+	
+	#maj-container #maj-info h1, #min-container #min-info h1 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+	#maj-container #maj-block {
+		float: none;
+		right: 0;
+	}
+	
+	#maj-container #maj-info {
+		top: 0;
+		left: 0;
+		float: none;
+		transform: none;
+		width: 80%;
+		height: auto;
+		margin: 0 auto;
+	}
+	
+	#min-container #min-block {
+		float: none;
+		left: 0;
+	}
+	
+	#min-container #min-info {
+		top: 0;
+		right: 0;
+		float: none;
+		transform: none;
+		height: auto;
+		width: 80%;
+		margin: 0 auto;
+	}
+}

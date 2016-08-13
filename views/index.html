@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ZipWatch</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script src="/js/menu.js"></script>
+        <script src="/js/index.js"></script>
+        <script src="/js/curr_location.js"></script>
+        
+        <link rel='icon' type="image/png" href="/img/icon.png" />
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,300|Roboto+Condensed:300,400' rel='stylesheet' type='text/css' />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<div class="logo">
+					<a href=""><i class="fa fa-map-marker fa-lg"></i>&nbsp;<span>ZipWatch</span></a>
+				</div>
+				<div class="nav">
+					<a href="#about" class="fa fa-info fa-lg" title="About"></a>
+					<a href="" class="fa fa-android" title="Android app"></a>
+					<!-- <a href="#contact" class="fa fa-envelope" title="Contact"></a> -->
+				</div>
+			</div>
+
+			<div id="content">
+				<div id="main-content" class="section">
+					<div id="filter">
+						<h2>Get Started with ZipWatch</h2>
+						<h3>ZipWatch can tell you how safe any New York City neighborhood is. Enter a zipcode or use your current location to get started:</h3>
+						<div id="input" class="option">
+							<form action="/search" method="GET" name="zip-search" id="search">
+								<input type="text" name="zipcode" class="input" onkeyup="this.value=this.value.replace(/[^\d]/,'')" placeholder="10065" maxlength="5" size="5" required>
+								<button type="submit">Go</button>
+							</form>
+						</div>
+						<div id="curr-loc" class="option">
+							<a class="button" href="javascript:void(0)" title="Use current location" onclick="curr_location()">Use Current Location</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="about" class="section">
+					<div id="info">
+						<h1>What's ZipWatch?</h1>
+						<h2>The Zipwatch project provides a decision-making tool for those who are in the market to buy or rent a home. We evaluate each neighborhood in the NYC area based on statistical factors. Using this information, we determine the quality of life in each neighborhood, displaying the facts in comprehensive visuals.</h2>
+						<h2>This app was created by students in the Hunter College Computer Science department.</h2>
+						<div class="table">
+							<div class="row">
+								<a href="">
+									<img src="img/programming.png" />
+									<h3>Aanandita Pujji</h3>
+									<h4>Web Developer</h4>
+								</a>
+							</div>
+							<div class="row android">
+								<img src="img/android.png" />
+								<h3>Fatima Alobahi</h3>
+								<h4>Android Developer</h4>
+							</div>
+							<div class="row database">
+								<img src="img/database.png" />
+								<h3>Saira Alam</h3>
+								<h4>Database Programmer</h4>
+							</div>
+							<div class="row data">
+								<img src="img/file.png" />
+								<h3>Jannat Akter</h3>
+								<h4>Data Collector</h4>
+							</div>
+						</div>
+						<!-- 
+						<table>
+							<tr>
+								<th>
+									<a href="">
+										<img src="img/programming.png" />
+										<h3>Aanandita Pujji</h3>
+										<h4>Web Developer</h4>
+									</a>
+								</th>
+								<th class="android">
+									<img src="img/android.png" />
+									<h3>Fatima Alobahi</h3>
+									<h4>Android Developer</h4>
+								</th>
+								<th class="database">
+									<img src="img/database.png" />
+									<h3>Saira Alam</h3>
+									<h4>Database Programmer</h4>
+								</th>
+								<th class="data">
+									<img src="img/file.png" />
+									<h3>Jannat Akter</h3>
+									<h4>Data Collector</h4>
+								</th>
+							</tr>
+						</table>
+						-->
+					</div>
+				</div>
+				<!--
+				<div id="contact" class="section">
+					<div id="form">
+						<div id="container">
+							<h1>Get In Touch</h1>
+							<form action="MAILTO:aapujji@yahoo.com" method="post" enctype="text/plain" class="contact-form">
+								<div class="field"><input type="text" placeholder="Name" name="name" required></div>
+								<div class="field"><input type="text" placeholder="E-mail" name="name" required></div>
+								<div class="field"><input type="text" placeholder="Phone Number" name="phone" required></div>
+								<div class="field"><input type="text" placeholder="Message" name="message" required></div>
+								<input type="submit" value="Submit" class="button">
+							</form>
+						</div>
+					</div>
+				</div>
+				-->
+			</div>
+			<div id="footer">
+				<div class="row info">
+					<div class="col-one col"><a href=""><i class="fa fa-map-marker fa-lg"></i>&nbsp;<span>ZipWatch</span></a></div>
+					<div class="col-two col">
+						<a href="" class="fa fa-envelope"></a>
+						<a href="" class="fa fa-facebook"></a>
+						<a href="" class="fa fa-github"></a>
+					</div>
+				</div>
+				<div class="row copyright">
+					Copyright <i class="fa fa-copyright"></i> 2016
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
